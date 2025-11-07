@@ -5,13 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Derick | Desenvolvedor Web - Landing Pages Profissionais</title>
     <meta name="description" content="Derick, desenvolvedor web especializado em criação de landing pages rápidas e otimizadas para conversão. Peça seu orçamento gratuito.">
+
     <link rel="stylesheet" href="./css/stayles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./css/img/favicon-16x16.png" type="image/png">
+    
+      <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:title" content="Derick | Desenvolvedor Web - Landing Pages Profissionais">
+    <meta property="og:description" content="Crio landing pages rápidas, seguras e otimizadas para conversão. Solicite seu orçamento gratuito!">
+    <meta property="og:image" content="https://derick-cloud.github.io/meu-portifolio/css/img/foto-perfil.png">
+    <meta property="og:url" content="https://derick-cloud.github.io/meu-portifolio/">
+    <meta property="og:type" content="website">
+
+      <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Derick | Desenvolvedor Web - Landing Pages Profissionais">
+    <meta name="twitter:description" content="Landing pages otimizadas e profissionais. Veja meu portfólio.">
+    <meta name="twitter:image" content="https://derick-cloud.github.io/meu-portifolio/css/img/foto-perfil.png">
+
+    </head>
 <body>
     <header>
+        <nav class="menu">
+         <a href="#info">Início</a>
+         <a href="#beneficios">Benefícios</a>
+         <a href="#portfolio">Portfólio</a>
+         <a href="#contato">Contato</a>
+        </nav>
         <!--hero-->
         <div class="container">
          <img class="hero-img"  src="./css/img/foto-perfil.png" alt="foto de perfil">
@@ -24,7 +46,7 @@
     </header>
        <!--main-->
     <main>
-        <section id="info">
+        <section id="info" class="reveal">
             <div class="container">
              <h2>Criação de Landing Pages Profissionais</h2>
              <p>Páginas rápidas, seguras e prontas para gerar conversões</p>
@@ -32,7 +54,7 @@
             </div>
         </section>
 
-        <section id="beneficios" class="beneficios">
+        <section id="beneficios" class="beneficios reveal">
             <div class="container center">
              <h2 class="beneficios-titulo">Benefícios / Serviços</h2>
              <p class="beneficios-subititulos">O que você ganha com uma página feita por mim</p>
@@ -45,7 +67,7 @@
             </div>
         </section>
 
-        <section id="Portfólio" class="portifolio">
+        <section id="portfolio" class="portifolio reveal">
             <div class="container">
              <h2 class="portifoli-title center">Portfólio / Trabalhos recentes</h2>
              <h3 class="portifolio-subtitle center">Currículo pessoal</h3>
@@ -60,12 +82,15 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
+    <footer class="reveal">
+        <div class="container" id="contato">
          <h2>Vamos conversar hoje mesmo.</h2>
-         <a href="https://wa.me/5531991922279" target="_blank" class="bnt-whatsapp">💬 Fale  comigo no WhatsApp: (31) 99192-2279 
-         <br>🔒 Atendimento direto, sem compromisso.</a>
+         <a href="https://wa.me/5531991922279" target="_blank" class="whatsapp-float title="Fale  comigo no WhatsApp"> 
+            <img src="./css/img/whatsapp (1).png"/ alt="WhatsApp">
+         </a>
+         <p><br>🔒 Atendimento direto, sem compromisso.</p>
         </div>
     </footer>
 </body>
+<script src="scripts.js"></script>
 </html>

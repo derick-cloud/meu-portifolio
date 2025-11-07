@@ -16,6 +16,10 @@ html, body{
   --radius: 16px;
   --container: 1100px;    /* largura máxima */
 }
+/* ===== Efeito de rolagem suave ===== */
+html {
+  scroll-behavior: smooth;
+}
 
 /* ===== Tipografia global ===== */
 body{
@@ -23,6 +27,29 @@ body{
  color: var(--text);
  background: linear-gradient(180deg, #faf8f7 0%, #f3f0ed 100%);
  line-height: 1.6;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 12px 0;
+  z-index: 999;
+}
+.menu a {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.menu a:hover {
+  color: var(--accent);
 }
 /* Utilitários */
 .container{
@@ -213,6 +240,42 @@ footer h3, footer h2{
 .btn-whatsapp:hover, .bnt-whatsapp:hover{
      filter: brightness(0.96);
 }
+.whatsapp-float {
+  position: fixed;         /* Fixa o botão na tela */
+  width: 64px;
+  height: 64px;
+  bottom: 24px;            /* Distância do rodapé */
+  right: 24px;             /* Distância da lateral direita */
+  z-index: 1000;           /* Fica por cima de tudo */
+}
+.whatsapp-float img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;      /* Deixa o botão redondo */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  animation: pulse 2.5s infinite; /* 💫 ativa o efeito */
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1);   /* Dá um leve zoom no hover */
+}
+/* ===== Animação pulsante no botão do WhatsApp ===== */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
 @media (max-width: 900px){
   header .container{
     grid-template-columns: 1fr;
@@ -236,3 +299,18 @@ footer h3, footer h2{
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(0,0,0,.15);
 }
+/* ===== Animações de entrada ===== */
+
+/* Começa invisível */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* Fica visível ao rolar */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
