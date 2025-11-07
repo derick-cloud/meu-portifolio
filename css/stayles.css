@@ -1,0 +1,238 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Variáveis de tema ===== */
+:root{
+  --bg: #f6f4f2;          /* bege claro do seu design */
+  --text: #3a3a3a;        /* cinza texto */
+  --muted: #6b6b6b;       /* cinza secundário */
+  --panel: #5a5a5a;       /* bloco cinza escuro do hero */
+  --accent: #25d366;      /* verde WhatsApp */
+  --radius: 16px;
+  --container: 1100px;    /* largura máxima */
+}
+
+/* ===== Tipografia global ===== */
+body{
+ font-family: "Poppins", system-ui, sans-serif;
+ color: var(--text);
+ background: linear-gradient(180deg, #faf8f7 0%, #f3f0ed 100%);
+ line-height: 1.6;
+}
+/* Utilitários */
+.container{
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.center{
+    text-align: center;
+}
+h1, h2,h3 {
+    line-height: 1.2;
+    margin: 0 0 12px;
+}
+p{
+    margin: 0 0 14px;
+}
+
+/* Links e botões base */
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.btn{
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+}
+.bnt--dark{
+    background: #5f6062; color: #fff; 
+}
+.bnt--accent{
+     background: var(--accent); color:#0c2b16;
+}
+.bnt--accent:hover{
+     filter: brightness(0.95);
+}
+
+/* ===== HERO ===== */
+
+header{
+    padding: 42px 0 32px;
+}
+header .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: center;
+}
+.hero-title{
+    font-size: clamp(36px,5vw, 56px);
+    color: #d7cfd7;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.hero-img{
+    width: 100%;
+    max-width: 420px;
+    border-radius: 28px;
+    display: block;
+    margin: 0 auto;
+}
+.hero-subtitle{
+    font-size: clamp(18px, 2.6vw, 28px);
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+.btn-hero{
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+    background:#5f6062; 
+    color:#fff
+}
+
+/* faixa cinza com o título grande */
+#info{
+    background: var(--panel);
+    color: #f2f2f2;
+    padding: 48px 0;
+    text-align: center;    
+}
+#info h2{
+    font-size: clamp(28px, 4.5vw, 48px);
+     color: #e5ddd5;
+     margin-bottom: 8px;
+}
+#info p{
+     color: #ececec;
+     max-width: 800px;
+     margin: 0 auto 8px;
+}
+
+/* ===== BENEFÍCIOS ===== */
+
+#beneficios{
+    padding: 56px, 0;
+}
+#beneficios .beneficios-titulo{
+       text-align: center;
+       font-size: clamp(24px, 4vw, 36px);
+       margin-bottom: 8px;
+}
+#beneficios .beneficios-subtitulo,
+#beneficios .beneficios-subititulo{
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 24px;
+}
+#beneficios ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 14px 22px;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+#beneficio li{
+    padding-left: 4px;
+}
+/* ===== PORTFÓLIO ===== */
+.portfolio, .portifolio{
+     padding: 56px;
+}
+.portfolio-title, .portifoli-title{
+        text-align: center;
+        font-size: clamp(26px, 4vw, 36px);
+        margin-bottom: 8px;
+} 
+.portfolio-subtitle, .portifolio-subtitle{
+ text-align: center;
+ color: var(--muted);
+ margin-bottom: 24px;
+}
+/* grid das imagens */
+.portfolio-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 16px;
+    max-width: var(--container);
+    margin: 0 auto 14px;
+    padding: 0, 20px;
+}
+.portfolio-img, .portifolio-img{
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0, 6px, 18px rgba(0, 0, 0, 0,08);
+    transition: transform .3s ease;
+}
+.portfolio-img:hover{
+  transform: scale(1.03);
+}
+.btn-link, .bnt-link{
+      display: inline-block;
+      margin-top: 8px;
+      font-weight: 600;
+      color: #2b76ff;
+}
+footer{
+    background: #e8e2db;
+    padding: 60px 20px;
+    text-align: center;
+}
+footer h3, footer h2{
+    margin-bottom: 18px;
+}
+.btn-whatsapp, .bnt-whatsapp{
+    display: inline-block;
+    background: var(--accent);
+    color: #0c2b16;
+    padding: 14px 22px;
+    border-radius: var(--radius);
+    font-weight: 700;
+   
+    
+}
+.btn-whatsapp:hover, .bnt-whatsapp:hover{
+     filter: brightness(0.96);
+}
+@media (max-width: 900px){
+  header .container{
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+ .hero-img{ 
+    max-width: 300px; 
+}
+  #beneficios ul{ 
+    grid-template-columns: 1fr;
+ }
+  .portfolio-grid{
+     grid-template-columns: 1fr; 
+    }
+}
+.btn, .btn-hero, .btn-whatsapp, .btn-link{
+  transition: all .25s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,.1);
+}
+.btn:hover, .btn-hero:hover, .btn-whatsapp:hover, .btn-link:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,.15);
+}
